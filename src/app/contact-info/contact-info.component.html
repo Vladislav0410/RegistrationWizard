@@ -1,0 +1,69 @@
+<form [formGroup]="formContactInfo">
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>SALUTATION</mat-label>
+            <mat-select formControlName="firstCtrl" required>
+                <mat-option value="one">First option</mat-option>
+                <mat-option value="two">Second option</mat-option>
+            </mat-select>
+            <mat-error>Salutaion is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="pat@example.com" formControlName="emailCtrl" required>
+            <mat-hint>EMAIL WILL BE YOUR LOGIN</mat-hint>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>FIRST NAME</mat-label>
+            <input matInput formControlName="thirdCtrl" required />
+            <mat-error>First Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>CONFIRM EMAIL</mat-label>
+            <input matInput formControlName="confirmEmailCtrl" required>
+            <mat-error>Confirm Email is required</mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>MIDDLE NAME</mat-label>
+            <input matInput formControlName="fifthCtrl" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>PHONE</mat-label>
+            <input matInput mask="(00)-000 00 00" formControlName="sixthCtrl" required />
+            <mat-error>Phone at least 9 number</mat-error>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>LAST NAME</mat-label>
+            <input matInput formControlName="seventhCtrl" required />
+            <mat-error>Last Name is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>FAX</mat-label>
+            <input matInput mask="(00)-000 00 00" formControlName="eighthCtrl" />
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>COMPANY</mat-label>
+            <input matInput formControlName="ninethCtrl" required />
+            <mat-error>Company is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>MOBILE</mat-label>
+            <input matInput mask="(00)-000 00 00" formControlName="tenthCtrl" />
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="outline">
+            <mat-label>TITLE</mat-label>
+            <input matInput formControlName="eleventhCtrl" required />
+            <mat-error>Title is required</mat-error>
+        </mat-form-field>
+    </div>
+</form>

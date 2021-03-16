@@ -1,0 +1,56 @@
+<form [formGroup]="formAddress">
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>COUNTRY</mat-label>
+      <mat-select formControlName="firstCtrl" required>
+        <mat-option value="one">United States</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>OFFICE NAME</mat-label>
+      <input
+        matInput
+        formControlName="secondCtrl"
+        required
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>ADDRESS</mat-label>
+      <textarea matInput formControlName="thirdCtrl" required></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>POSTAL CODE</mat-label>
+      <input
+        matInput
+        type = "number"
+        formControlName="fourthCtrl"
+        required
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>CITY</mat-label>
+      <input
+        matInput
+        formControlName="fifthCtrl"
+        required
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>STATE</mat-label>
+      <mat-select formControlName="sixthCtrl" required>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</form>

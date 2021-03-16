@@ -1,0 +1,21 @@
+<form [formGroup]="formAreas">
+    <div class="container">
+        <section>
+            <span>*Bussiness area</span>
+            <span class="example-list-section">
+          <div *ngFor="let Task of task">
+            <mat-checkbox [formControlName]="Task">
+              {{Task}}
+            </mat-checkbox>
+          </div>
+      </span>
+        </section>
+        <section>
+            <mat-form-field appearance="outline" class="comments">
+                <mat-label>Comments</mat-label>
+                <textarea matInput formControlName="secondCtrl" cdkTextareaAutosize cdkAutosizeMinRows="4" cdkAutosizeMaxRows="10" required></textarea>
+                <mat-hint>LET US KNOW FOR WHICH NETWORK YOU ARE REQUESTING ACCESS, AND ANY OTHER COMMENTS YOU'D LIKE TO LEAVE US</mat-hint>
+            </mat-form-field>
+        </section>
+    </div>
+</form>

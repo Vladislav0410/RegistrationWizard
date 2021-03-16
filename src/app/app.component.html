@@ -1,0 +1,63 @@
+<h1>New User Registration</h1>
+<h2>Step {{ tab + 1 }}: {{ stepName[tab] }}</h2>
+
+<div class="container" *ngIf="appService.form.value">
+    <div (click)="stepperChangeTab('click')" class="container">
+        <mat-vertical-stepper linear #stepper>
+            <mat-step [stepControl]="appService.form.controls.contactInfoForm">
+                <ng-template matStepLabel class="stepTitle">{{ stepName[0] }}</ng-template>
+            </mat-step>
+            <mat-step [stepControl]="appService.form.controls.areasForm">
+                <ng-template matStepLabel>{{ stepName[1] }}</ng-template>
+            </mat-step>
+            <mat-step [stepControl]="appService.form.controls.addressForm">
+                <ng-template matStepLabel>{{ stepName[2] }}</ng-template>
+            </mat-step>
+            <mat-step [stepControl]="appService.form.controls.passwordForm">
+                <ng-template matStepLabel>{{ stepName[3] }}</ng-template>
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>{{ stepName[4] }}</ng-template>
+            </mat-step>
+        </mat-vertical-stepper>
+        <hr />
+    </div>
+    <div>
+        <ng-container [ngSwitch]="tab">
+            <form>
+                <ng-container *ngSwitchCase="0">
+                    <app-contact-info></app-contact-info>
+                </ng-container>
+                <ng-container *ngSwitchCase="1">
+                    <app-areas></app-areas>
+                </ng-container>
+                <ng-container *ngSwitchCase="2">
+                    <app-address></app-address>
+                </ng-container>
+                <ng-container *ngSwitchCase="3">
+                    <app-password></app-password>
+                </ng-container>
+                <ng-container *ngSwitchCase="4">
+                    <div class='completed'>
+                        <section class='icons'>
+                            <img style="height: 25px;" src="https://ipio-books.com/wp-content/uploads/2018/03/success-icon.png"></section>
+                        <section>
+                            <h4>Thank you for registering!</h4>
+                            <p>
+                                A registration confirmation email was sent to the email address provided. Your registration will be sent<br /> for approval and activation to the Administrator.<b>
+                                    You will receive an email when your account is ready<br />
+                                    to use.</b>
+                            </p>
+                        </section>
+                    </div>
+                </ng-container>
+            </form>
+        </ng-container>
+    </div>
+</div>
+<div class="btn">
+    <ng-container *ngIf="tab !== 4">
+        <button mat-raised-button (click)="stepperChangeTab('down')" *ngIf="tab !== 0 ">Back</button>
+        <button mat-raised-button color="primary" (click)="stepperChangeTab('up')">Next</button>
+    </ng-container>
+</div>
