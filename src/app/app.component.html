@@ -5,19 +5,19 @@
     <div (click)="stepperChangeTab('click')" class="container">
         <mat-vertical-stepper linear #stepper>
             <mat-step [stepControl]="appService.form.controls.contactInfoForm">
-                <ng-template matStepLabel class="stepTitle">{{ stepName[0] }}</ng-template>
+                <ng-template matStepLabel><span class="headerTitle">{{ stepName[0] }}</span></ng-template>
             </mat-step>
             <mat-step [stepControl]="appService.form.controls.areasForm">
-                <ng-template matStepLabel>{{ stepName[1] }}</ng-template>
+                <ng-template matStepLabel><span class="headerTitle">{{ stepName[1] }}</span></ng-template>
             </mat-step>
             <mat-step [stepControl]="appService.form.controls.addressForm">
-                <ng-template matStepLabel>{{ stepName[2] }}</ng-template>
+                <ng-template matStepLabel><span class="headerTitle">{{ stepName[2] }}</span></ng-template>
             </mat-step>
             <mat-step [stepControl]="appService.form.controls.passwordForm">
-                <ng-template matStepLabel>{{ stepName[3] }}</ng-template>
+                <ng-template matStepLabel><span class="headerTitle">{{ stepName[3] }}</span></ng-template>
             </mat-step>
             <mat-step>
-                <ng-template matStepLabel>{{ stepName[4] }}</ng-template>
+                <ng-template matStepLabel><span class="headerTitle">{{ stepName[4] }}</span></ng-template>
             </mat-step>
         </mat-vertical-stepper>
         <hr />
